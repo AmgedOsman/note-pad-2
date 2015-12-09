@@ -1,0 +1,33 @@
+{
+    "title": "NotePad2",
+    "name": "note-pad-2",
+    "description": "A light theme that is based on NotePad2 (Very readable).",
+    "keywords": ["light", "theme", "quick", "Notepad"],
+    "homepage": "https://github.com/amgedosman/note-pad-2",
+    "license": "MIT",
+
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/amgedosman/note-pad-2.git"
+    },
+
+    "bugs": {
+        "url": "https://github.com/amgedosman/note-pad-2/issues"
+    },
+
+    "author": {
+        "name": "Amged Osman",
+        "url": "https://github.com/amgedosman"
+    },
+
+    "theme": {
+        "file": "main.less",
+        "dark": false
+    },
+
+    "engines": {
+        "brackets": ">=1.0.0"
+    },
+
+    "version": "1.0.0"
+}
