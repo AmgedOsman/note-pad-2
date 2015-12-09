@@ -1,0 +1,191 @@
+/**
+ * Theme NotePad2 Copyright (c) 2015
+ * @Amged
+ * http://amged.me/
+ * Licensed under MIT
+ */
+
+
+/* Palette */
+@background: #ffffff;
+@foreground: #1b1c1d;
+@comment:    #FF8000;
+@gray:       #bec0c2;
+@black:      #0c0d0d;
+@blue:       #000080;
+@purple:     #881280;
+@red:        #FF0000;
+@orange:     #d8542c;
+@yellow:     #ffff00;
+@green:      #0a9b20;
+@aqua:       #3da0a4;
+@brown:      #A46000;
+@operator:      #B000B0;
+
+/* Selection colors */
+@selection-color-focused:   fade(@blue, 25%);
+@selection-color-unfocused: fade(@gray, 35%);
+
+/* Active line colors */
+@active-line-bg:           fade(@gray, 25%);
+@active-line-gutter-bg:    fade(@gray, 40%);
+@active-line-number-color: @red;
+
+
+/* Editor styling */
+.cm-keyword        { color: @brown; }
+.cm-atom           { color: @purple; }
+.cm-number         { color: @red; }
+.cm-def            { color: @foreground; }
+.cm-variable       { color: @foreground; }/* default php functions*/
+.cm-variable-2     { color: @blue; font-style: italic; } /* $variables */
+.cm-variable-3     { color: #B000B0; font-style: italic; }
+.cm-operator       { color: @operator; }
+.cm-comment        { color: @comment; }
+.cm-string         { color: @green; }
+.cm-string-2       { color: @red; }
+.cm-meta           { color: @red; }
+.cm-qualifier      { color: darken(@yellow, 20%);} /* @blue */
+.cm-builtin        { color: @purple; }/*yellow*/
+.cm-bracket        { color: @foreground; }
+.cm-tag            { color: @blue; }
+.cm-tag.cm-bracket { color: darken(@blue, 15%); }
+.cm-attribute      { color: @red; }
+.cm-property       { color: @red; }/*yellow*/
+
+.cm-quote          { color: @blue; }
+.cm-header         { color: darken(@purple, 15%); }
+.cm-link           { color: @yellow; }/*yellow*/
+.cm-em             { color: @orange; font-style: italic; }
+.cm-strong         { color: @blue; }
+.cm-strikethrough  { color: @aqua; }
+.cm-hr             { color: @purple; }
+
+.cm-error          { color: @red; }
+
+.cm-matchhighlight    { border-bottom-color: @foreground; }
+.quick-view-highlight { background-color: fade(@foreground, 20%); }
+
+.CodeMirror {
+    line-height: 1.32;
+}
+
+.CodeMirror-scroll {
+    background-color: @background;
+    color: @foreground;
+}
+
+.CodeMirror-gutters {
+    background-color: darken(@background, 2%);
+}
+
+.inline-widget .CodeMirror-gutters {
+    background-color: transparent;
+}
+
+.CodeMirror-selected {
+    background-color: @selection-color-unfocused;
+}
+
+.CodeMirror-focused .CodeMirror-selected {
+    background-color: @selection-color-focused;
+}
+
+.CodeMirror-searching {
+    background-color: fade(@foreground, 40%);
+    color: @background !important;
+}
+
+.CodeMirror-searching.searching-current-match {
+    background-color: @foreground;
+}
+
+.CodeMirror-nonmatchingbracket {
+    background-color: fade(@red, 50%);
+    color: @black !important;
+}
+
+.CodeMirror-focused .CodeMirror-nonmatchingbracket {
+    background-color: fade(@red, 75%);
+}
+
+.CodeMirror-matchingbracket {
+    background-color: lighten(@gray, 10%);
+    color: @black !important;
+}
+
+.CodeMirror-focused .CodeMirror-matchingbracket {
+    background-color: lighten(@gray, 5%);
+}
+
+.CodeMirror-matchingtag {
+    background-color: lighten(@gray, 15%);
+}
+
+.CodeMirror-focused .CodeMirror-matchingtag {
+    background-color: lighten(@gray, 10%);
+}
+
+.CodeMirror-linenumber {
+    color: @comment !important;
+}
+
+.CodeMirror-activeline .CodeMirror-linenumber {
+    color: @active-line-number-color !important;
+}
+
+.CodeMirror-activeline-background {
+    background-color: fadeout(@active-line-bg, 15%) !important;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background-color: @active-line-bg !important;
+}
+
+.CodeMirror-activeline .CodeMirror-gutter-elt {
+    background-color: fadeout(@active-line-gutter-bg, 15%);
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+    background-color: @active-line-gutter-bg;
+}
+
+.CodeMirror-cursor {
+    border-left: 1px solid @black;
+}
+
+.CodeMirror-overwrite .CodeMirror-cursor {
+    border-bottom: 1px solid @black;
+    border-left: none;
+}
+
+.CodeMirror-foldmarker {
+    border-color: lighten(@gray, 5%);
+    background-color: #fff;
+    color: lighten(@black, 40%);
+}
+
+.CodeMirror-foldgutter-open::after {
+    color: lighten(@gray, 10%);
+}
+
+.over-gutter .CodeMirror-foldgutter-open::after {
+    color: @gray;
+}
+
+.CodeMirror-activeline .CodeMirror-foldgutter-open::after,
+.CodeMirror-foldgutter-folded::after {
+    color: @foreground;
+}
+
+
+/* Non-editor styling */
+.not-editor {
+    background-color: @background;
+    transition: background-color 0.15s ease-out;
+}
+
+.image-view {
+    background-color: @background;
+    color: @foreground;
+}
