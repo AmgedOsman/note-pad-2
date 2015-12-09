@@ -3,10 +3,10 @@
 A light theme that is based on NotePad2 (Very readable) for [Brackets](http://brackets.io/).
 
 ## PHP
-![PHP Screenshot](screenshots/php.png)
+![PHP Screenshot](https://i.imgur.com/3fJaQiD.png)
 
 ## CSS
-![CSS Screenshot](screenshots/css.png)
+![CSS Screenshot](https://i.imgur.com/IeJMmTn.png)
 
 
 
